@@ -1,10 +1,10 @@
 ### PHP5 - Otomatik Veritabanı Bağlantısı ve Kurulumu
-__
+___
 
 Bu sistem ile yapmış olduğunuz web sistemini başkalara satışında ve/veya paylaşımında kendi veritabanı yedeğinizi paylaşmadan düzenleyerek web sisteminiz için bir veritabanı oluşturma sistemi yapabilirsiniz. Aşırı basit bir şekilde yaptım, geliştirmek size kalmış.
 
 #### Kullanım
-__
+___
 
 1. Hostinginizin panelinden veya localhost kullanıyorsanız localhost/phpmyadmin veya diğer veritabanı panel erişiminize girerek bir Mysql kullanıcı hesabı oluşturun.
 2. Veritabanınızın kurulması için bir tablo oluşturun.
