@@ -1,5 +1,4 @@
 ### PHP5 - Üye Kayıt Sistemi
-
 __
 
 Bu sistem ile yapmış olduğunuz PHP web sistemlerine üye kayıt sistemi ekleyebilirsiniz. Basitleştirilmiş bir şekilde yapılmıştır. Fonksiyonlar üzerinden incelemeye sağlayarak kendinize uygun şekilde güncelleyebilirsiniz.

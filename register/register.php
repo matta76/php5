@@ -16,6 +16,7 @@
         .m-t1 {
             margin-top:1%;
         }
+        
         .tooltip {
             position: relative;
             display: inline-block;

@@ -4,11 +4,13 @@
 
                 return $string;
             }
+
             function verisifreleme($string){
                 $string = md5($string);
 
                 return $string;
             }
+            
             function uyekayit($username, $password, $passkontrol){
                 $uyekontrolu = mysql_query("SELECT * FROM users WHERE username = '$username'", $GLOBALS['conn']);
 
