@@ -7,9 +7,9 @@
     <head>
         <title>PHP REGISTER</title>
         <meta charset="UTF-8">
-        <meta name="description" content="matta - PHP">
-        <meta name="keywords" content="PHP">
-        <meta name="author" content="matta#7310">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
@@ -49,8 +49,8 @@
                 if(isset($_POST["regstart"])){
                     $_USERNAME = veriguvenlik($_POST["username"]);
                     $_PASSWORD = verisifreleme($_POST["password"]);
-                    
-                    uyekayit($_USERNAME, $_PASSWORD);
+                    $_PASSWORDTEKRAR = verisifreleme($_POST["passwordtekrar"]);
+                    uyekayit($_USERNAME, $_PASSWORD, $_PASSWORDTEKRAR);
                 }
             ?>
             <?php ?>
@@ -59,9 +59,12 @@
                 <input type="text" name="username" class="m-t1" required><br><br>
                 <label>Şifre</label><br>
                 <input type="text" name="password" class="mt-1" required><br><br>
+                <label>Şifre Tekrar</label><br>
+                <input type="text" name="passwordtekrar" class="mt-1" required><br><br>
 
                 <button type="submit" name="regstart">Kayıt Ol</button>
             </form>
         </center>
     </body>
 </html>
+<?php  ?>

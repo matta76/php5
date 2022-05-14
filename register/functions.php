@@ -9,7 +9,7 @@
 
                 return $string;
             }
-            function uyekayit($username, $password){
+            function uyekayit($username, $password, $passkontrol){
                 $uyekontrolu = mysql_query("SELECT * FROM users WHERE username = '$username'", $GLOBALS['conn']);
 
                 $uyekontrolusayisi = mysql_num_rows($uyekontrolu);
@@ -17,12 +17,18 @@
                 if($uyekontrolusayisi >= 1){
                     echo '<h4>Böyle bir üye olduğu için kayıt işlemi yapamazsınız.</h4>';
                 } else {
-                    $uyekaydiyap = mysql_query("INSERT INTO users (username, password) VALUES ('$username', '$password')", $GLOBALS['conn']);
+                    if($password == $passkontrol){
+                        $uyekaydiyap = mysql_query("INSERT INTO users (username, password) VALUES ('$username', '$password')", $GLOBALS['conn']);
 
-                    if($uyekaydiyap){
-                        echo '<h4>Kayıt işlemi başarılı bir şekilde gerçekleştirildi.</h4>';
+                        if($uyekaydiyap){
+                            echo '<h4>Kayıt işlemi başarılı bir şekilde gerçekleştirildi.</h4>';
+                        } else {
+                            echo '<h4>Kayıt işlemi gerçekleştirilirken bir hata oluştu.</h4>';
+                        }
                     } else {
-                        echo '<h4>Kayıt işlemi gerçekleştirilirken bir hata oluştu.</h4>';
+                        echo '
+                            <h4>Girilen şifreler birbiriyle eşleşmiyor.</h4>
+                        ';
                     }
                 }
             }
